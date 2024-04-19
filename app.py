@@ -21,7 +21,7 @@ driver.implicitly_wait(2)
 
 driver.find_element(By.ID,'toCity').click()
 to_state=driver.find_element(By.XPATH,"//input[@placeholder='To']")
-to_state.send_keys('PNQ')
+to_state.send_keys('ZER')
 driver.implicitly_wait(2)
 driver.find_element(By.XPATH,"//li[@id='react-autowhatever-1-section-0-item-0']").click()
 driver.implicitly_wait(2)
