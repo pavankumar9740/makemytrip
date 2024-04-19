@@ -1,3 +1,4 @@
+import os
 from time import sleep
 
 from selenium import webdriver
@@ -28,6 +29,7 @@ driver.implicitly_wait(2)
 driver.find_element(By.XPATH,"//div[@aria-label='Sun Apr 21 2024']").click()
 driver.implicitly_wait(2)
 driver.find_element(By.XPATH,"//a[contains(text(),'Search')]").click()
-driver.save_screenshot('date.png')
+screenshot_path = os.path.join(os.getcwd(), 'screenshot.png')
+driver.save_screenshot(screenshot_path)
 driver.implicitly_wait(2)
 driver.close()
