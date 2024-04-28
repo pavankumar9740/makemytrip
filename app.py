@@ -9,10 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.service import Service as FirefoxService
-# driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
-# firefox_service = FirefoxService(executable_path=GeckoDriverManager().install())
-# driver=webdriver.Firefox(service=firefox_service)
-# driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
 driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
 driver.get("https://www.makemytrip.com/")
 driver.implicitly_wait(2)
@@ -40,8 +37,6 @@ from_state=driver.find_element(By.XPATH,"//input[@placeholder='From']")
 from_state.send_keys('BLR')
 driver.find_element(By.XPATH,"//*[@class='makeFlex column flexOne']").click()
 driver.implicitly_wait(2)
-# driver.find_element(By.XPATH,"//body/div[@id='root']/div[@id='top-banner']/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/div[1]").click()
-# driver.find_element(By.XPATH,"//li[@id='react-autowhatever-1-section-0-item-0']//div[@class='makeFlex flexOne column']").click()
 # driver.find_element(By.XPATH,"//body/div[@id='root']/div[@id='top-banner']/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/div[1]/div[1]").click()
 # driver.find_element(By.XPATH,"//li[@id='react-autowhatever-1-section-0-item-0']//div[@class='mak
 driver.find_element(By.ID,'toCity').click()
